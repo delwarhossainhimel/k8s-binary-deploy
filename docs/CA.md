@@ -1,11 +1,11 @@
-📜 Certificate Authority (CA) Setup for Kubernetes
+#📜 Certificate Authority (CA) Setup for Kubernetes
 
 To securely provision Kubernetes components, we first need to generate a Certificate Authority (CA). This CA will be used to sign certificates for etcd, kube-apiserver, and other control plane and worker node components.
+---
+##🔧 Step 1: Create OpenSSL Configuration
 
-🔧 Step 1: Create OpenSSL Configuration
-
-Create a file named CAopenssl.cnf with the following contents:
-
+### Create a file named CAopenssl.cnf with the following contents:
+```ini
 [req]
 distinguished_name = req_distinguished_name
 x509_extensions = v3_ca

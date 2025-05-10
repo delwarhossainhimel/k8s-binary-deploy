@@ -1,10 +1,17 @@
 
-![image](https://github.com/user-attachments/assets/2620f0a5-f7d8-4fa8-84c9-e2024369e51a){width="6.5in"
-height="2.9604166666666667in"}
+![image](https://github.com/user-attachments/assets/2620f0a5-f7d8-4fa8-84c9-e2024369e51a)
 
-I will generate CA and create a CA server
+# 🗃️ Provisioning etcd Server for Kubernetes (Manual TLS Setup)
 
-#vim CAopenssl.cnf
+This guide explains how to manually provision an etcd server using binaries and secure it with a custom Certificate Authority (CA). etcd is a critical component of Kubernetes, serving as the primary data store for all cluster information.
+
+---
+
+## 🔐 Step 1: Create a Certificate Authority (CA)
+
+You will use OpenSSL to create your own CA to issue certificates for etcd and other Kubernetes components.
+
+### 1.1 Create `CAopenssl.cnf`
 
 \[req\]
 

@@ -1,5 +1,5 @@
-![A computer screen shot of a program AI-generated content may be
-incorrect.](media/image1.png){width="6.5in"
+
+![image](https://github.com/user-attachments/assets/2620f0a5-f7d8-4fa8-84c9-e2024369e51a){width="6.5in"
 height="2.9604166666666667in"}
 
 I will generate CA and create a CA server

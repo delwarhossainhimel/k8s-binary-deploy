@@ -2,7 +2,7 @@
 
 To securely provision Kubernetes components, we first need to generate a Certificate Authority (CA). This CA will be used to sign certificates for etcd, kube-apiserver, and other control plane and worker node components.
 ---
-##🔧 Step 1: Create OpenSSL Configuration
+🔧 Step 1: Create OpenSSL Configuration
 ![image](https://github.com/user-attachments/assets/c3fec232-1c11-418c-9bef-3f8ac1025378)
 
 ### Create a file named CAopenssl.cnf with the following contents:
@@ -28,7 +28,7 @@ basicConstraints = critical, CA:true
 keyUsage = critical, keyCertSign, cRLSign
 EOF
 ```
-#🔐 Step 2: Generate the Private Key
+🔐 Step 2: Generate the Private Key
 ```bash
 openssl genpkey -algorithm RSA -out ca.key -pkeyopt rsa_keygen_bits:4096
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 1000   -out ca.crt -config CAopenssl.cnf -extensions v3_ca

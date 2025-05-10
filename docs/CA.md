@@ -5,7 +5,7 @@ To securely provision Kubernetes components, we first need to generate a Certifi
 ##🔧 Step 1: Create OpenSSL Configuration
 
 ### Create a file named CAopenssl.cnf with the following contents:
-```ini
+```bash
 cat <<EOF > CAopenssl.cnf
 [req]
 distinguished_name = req_distinguished_name
@@ -26,7 +26,7 @@ authorityKeyIdentifier = keyid:always,issuer
 basicConstraints = critical, CA:true
 keyUsage = critical, keyCertSign, cRLSign
 EOF
-'''
+```
 You can use the following command to quickly create it:
 
 cat <<EOF > CAopenssl.cnf

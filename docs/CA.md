@@ -28,35 +28,8 @@ basicConstraints = critical, CA:true
 keyUsage = critical, keyCertSign, cRLSign
 EOF
 ```
-🔐 Step 2: Generate the Private Key
+🔐 Step 2: Generate the Private Key and CA Certificate
 ```bash
 openssl genpkey -algorithm RSA -out ca.key -pkeyopt rsa_keygen_bits:4096
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 1000   -out ca.crt -config CAopenssl.cnf -extensions v3_ca
 ```
-📄 Step 3: Generate the Self-Signed CA Certificate
-
-Using the key and config file, generate a self-signed certificate valid for 1000 days:
-
-openssl req -x509 -new -nodes -key ca.key \
-  -sha256 -days 1000 \
-  -out ca.crt \
-  -config CAopenssl.cnf \
-  -extensions v3_ca
-
-✅ Output Files
-
-File
-
-Description
-
-ca.key
-
-Private key of the CA
-
-ca.crt
-
-Self-signed root certificate
-
-CAopenssl.cnf
-
-Configuration used for CA creation

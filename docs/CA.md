@@ -24,7 +24,7 @@ subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always,issuer
 basicConstraints = critical, CA:true
 keyUsage = critical, keyCertSign, cRLSign
-
+---
 You can use the following command to quickly create it:
 
 cat <<EOF > CAopenssl.cnf

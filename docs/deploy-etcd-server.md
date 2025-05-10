@@ -13,36 +13,25 @@ You will use OpenSSL to create your own CA to issue certificates for etcd and ot
 
 ### 1.1 Create `CAopenssl.cnf`
 
-\[req\]
-
+```ini
+# vim CAopenssl.cnf
+[req]
 distinguished_name = req_distinguished_name
-
 x509_extensions = v3_ca
-
 prompt = no
 
-\[req_distinguished_name\]
-
+[req_distinguished_name]
 C = BD
-
 ST = Dhaka
-
 L = Dhaka
-
 O = Kubernetes
-
 OU = CA
-
 CN = kubernetes-ca
 
-\[v3_ca\]
-
+[v3_ca]
 subjectKeyIdentifier = hash
-
 authorityKeyIdentifier = keyid:always,issuer
-
 basicConstraints = critical, CA:true
-
 keyUsage = critical, keyCertSign, cRLSign
 
 openssl genpkey -algorithm RSA -out ca.key -pkeyopt rsa_keygen_bits:4096

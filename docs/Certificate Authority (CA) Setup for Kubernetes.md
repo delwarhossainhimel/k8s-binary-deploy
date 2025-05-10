@@ -33,3 +33,4 @@ EOF
 openssl genpkey -algorithm RSA -out ca.key -pkeyopt rsa_keygen_bits:4096
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 1000   -out ca.crt -config CAopenssl.cnf -extensions v3_ca
 ```
+![image](https://github.com/user-attachments/assets/9ab08416-9c7b-40b8-9abd-2d55936406c8)

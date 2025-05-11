@@ -10,3 +10,11 @@ Organize your files by creating a directory named `network`:
 mkdir network
 cd network
 ```
+## Step 2: Download the Calico Manifest
+Use wget to download the official Calico YAML manifest:
+```bash
+wget https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml
+wget  https://raw.githubusercontent.com/mmumshad/kubernetes-the-hard-way/master/deployments/coredns.yaml
+vim calico.yaml  #add thi line given below
+4971             initialDelaySeconds: 10 #Increase from default 5s
+```

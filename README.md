@@ -1,4 +1,6 @@
 # Kubernetes The Hard Way
+refarance1: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+refarance2: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/mmumshad/kubernetes-the-hard-way)
 
 Updated: April 2025
 

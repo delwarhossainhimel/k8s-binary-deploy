@@ -1,6 +1,6 @@
 # Kubernetes The Hard Way
 refarance1: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) \
-refarance2: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/mmumshad/kubernetes-the-hard-way)
+refarance2: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/mmumshad/kubernetes-the-hard-way) \
 [![Watch the video](https://img.youtube.com/vi/uUupRagM7m0/0.jpg)](https://www.youtube.com/watch?v=uUupRagM7m0)
 
 

@@ -1,0 +1,12 @@
+This guide explains how to install the Calico network plugin and ensure CoreDNS is functional in a Kubernetes cluster.
+
+---
+
+## Step 1: Create a Directory for Network Manifests
+
+Organize your files by creating a directory named `network`:
+
+```bash
+mkdir network
+cd network
+```

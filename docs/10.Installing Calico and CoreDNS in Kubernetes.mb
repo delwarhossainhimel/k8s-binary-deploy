@@ -16,5 +16,8 @@ Use wget to download the official Calico YAML manifest:
 wget https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml
 wget  https://raw.githubusercontent.com/mmumshad/kubernetes-the-hard-way/master/deployments/coredns.yaml
 vim calico.yaml  #add thi line given below
+readinessPode: section
 4971             initialDelaySeconds: 10 #Increase from default 5s
+kubectl apply -f calico.yaml
+kubectl apply -f coredns.yaml
 ```

@@ -1,4 +1,11 @@
 ref: https://medium.com/@cloudspinx/fix-error-metrics-api-not-available-in-kubernetes-aa10766e1c2f
+
+##when selinux is enforced
+```bash
+sudo getsebool container_manage_cgroup
+sudo setsebool -P container_manage_cgroup on
+sudo getsebool container_manage_cgroup
+```
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml 
 ```bash

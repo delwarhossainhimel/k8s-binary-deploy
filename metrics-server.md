@@ -40,3 +40,20 @@ kubectl logs -f metrics-server-6f7dd4c4c4-b5t8r -n kube-system
 kubectl -n kube-system get pods -l k8s-app=metrics-server
 kubectl get apiservices -l k8s-app=metrics-server
 ```
+```bash
+kubectl -n kube-system patch deployment metrics-server --type='json' -p='[
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/containers/0/args",
+    "value": [
+      "--cert-dir=/tmp",
+      "--secure-port=10250",
+      "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
+      "--kubelet-use-node-status-port",
+      "--metric-resolution=15s",
+      "--kubelet-insecure-tls"
+    ]
+  }
+]'
+```
+kubectl -n kube-system rollout restart deployment metrics-server

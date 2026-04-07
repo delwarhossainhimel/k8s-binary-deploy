@@ -7,7 +7,8 @@ sudo setsebool -P container_manage_cgroup on
 sudo getsebool container_manage_cgroup
 ```
 ```bash
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml 
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability-1.21+.yaml
 ```bash
 kubectl patch deployment metrics-server -n kube-system --type='json' -p='[
 {

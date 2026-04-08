@@ -85,4 +85,5 @@ kubectl patch deployment metrics-server -n kube-system --type='json' -p='[
 }
 ]'
 kubectl -n kube-system rollout restart deployment metrics-server
+kubectl -n kube-system rollout status deployment metrics-server
 ```
